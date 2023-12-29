@@ -8,13 +8,16 @@ import (
 
 func main() {
 
-	port := "8000"
+	envport := "8000"
 
 	router := gin.New()
 	router.Use(cors.Default())
 	router.Use(gin.Logger())
 
 	router.POST("/entry/create", routes.AddEntry)
-	// router.GET("/entry/showall", routes.showallEntry)
+	router.GET("/entry/showall", routes.ShowAllEntry)
+	router.PUT("/entry/update", routes.UpdateEntry)
+	router.DELETE("/entry/remove", routes.DeleteEntry)
+	router.Run(":" + envport)
 
 }

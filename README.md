@@ -2,5 +2,5 @@
 
 Commands
 
-go init go-react-calorie-tracker
+go init go-react-calorie-tracker,
 go mod tidy
