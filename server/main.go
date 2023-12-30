@@ -15,9 +15,9 @@ func main() {
 	router.Use(gin.Logger())
 
 	router.POST("/entry/create", routes.AddEntry)
-	router.GET("/entry/showall", routes.ShowAllEntry)
+	router.GET("/entry/entries", routes.ShowAllEntry)
 	router.PUT("/entry/update", routes.UpdateEntry)
-	router.DELETE("/entry/remove", routes.DeleteEntry)
+	router.DELETE("/entry/delete", routes.DeleteEntry)
 	router.Run(":" + envport)
 
 }
